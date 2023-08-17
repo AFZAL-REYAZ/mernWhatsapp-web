@@ -11,6 +11,9 @@ app.use(cors());
 app.use(bodyParser.json({extended:true}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use('/',Route);
+app.get("/test",(req,res)=>{
+    res.json({data:"connect"})
+})
 
 Connection();
 const PORT = 8000;
